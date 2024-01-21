@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/details.css" />
+    <link rel="stylesheet" href="./assets/css/color.css" />
+  </head>
+  <body>
+    <header>
+      <div class="top-bar container box-shadow">
+        <h1>Where in the world?</h1>
+        <div class="theme">
+          <div class="theme-img">
+            <img src="./assets/img/Group 3.svg" alt="" />
+          </div>
+          Dark Mode
+        </div>
+      </div>
+    </header>
+    <main class="container">
+      <section class="navigate-section-container">
+        <a  onclick="history.back()" class="link-back box-shadow border-radius">
+          <img src="./assets/img/call-made.svg" alt="" />
+          <p >Back</p>
+        </a>
+      </section>
+
+      <section>
+        <div class="country-flag">
+          <img src="" alt="" />
+        </div>
+        <div class="country-content">
+          <h2 class="country-name"></h2>
+          <div class="country-details">
+            <div class="country-details__left">
+              <p><b>Native Name:</b>&nbsp;<span class="native-name"></span></p>
+              <p><b>Population:</b>&nbsp;<span class="population"></span></p>
+              <p><b>Region:</b>&nbsp;<span class="region"></span></p>
+              <p><b>Sub-region:</b>&nbsp;<span class="sub-region"></span></p>
+              <p><b>Capital:</b>&nbsp;<span class="capital"></span></p>
+            </div>
+            <div class="country-details__right">
+              <p><b>Top level domain:</b>&nbsp;<span class="top-level-domain"></span></p>
+              <p><b>Currencies:</b>&nbsp;<span class="currencies"></span></p>
+              <p><b>Languages:</b>&nbsp;<span class="languages"></span></p>
+            </div>
+          </div>
+          <div class="country-border">
+            <div>Border Countries:</div>
+            <div>
+              <div>France</div>
+              <div>Germany</div>
+              <div>Niderland</div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="./assets/js/details.js"></script>
+  </body>
+</html>

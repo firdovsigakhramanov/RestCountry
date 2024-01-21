@@ -1,0 +1,10 @@
+:root {
+  --box-shadow-header: rgba(0, 0, 0, 0.06);
+  --white: #fff;
+  --black: #000;
+  --background-color: #fafafa;
+  --text-color: #111517;
+  --border-color: #979797;
+  --input-placeholder: #848484;
+  --box-shadow-country-border: rgba(0, 0, 0, 0.1);
+}
