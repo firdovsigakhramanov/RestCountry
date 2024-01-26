@@ -144,6 +144,10 @@ body.dark-mode .country-details b {
   color: var(--white, #fff);
 }
 
+body.dark-mode .country-details span {
+  color: var(--white, #fff);
+}
+
 .country-border {
   display: flex;
   gap: 10px;
