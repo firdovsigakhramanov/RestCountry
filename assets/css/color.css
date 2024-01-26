@@ -7,4 +7,7 @@
   --border-color: #979797;
   --input-placeholder: #848484;
   --box-shadow-country-border: rgba(0, 0, 0, 0.1);
+  /*!-------- Dark-colors ------ */
+  --background-color-dark: #202C36;
+  --header-color-dark:#2B3844;
 }

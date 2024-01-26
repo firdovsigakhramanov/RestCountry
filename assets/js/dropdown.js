@@ -1,6 +1,6 @@
 let filterSelect = document.querySelector(".filter-select");
 let filterOptions = document.querySelector(".filter-options");
-let selectImg = document.querySelector(".filter-select__img > img");
+let selectImg = document.querySelector(".filter-select__img > i");
 let filterOption = document.querySelectorAll(".filter-option");
 let filterSelectText = document.querySelector(".filter-select > span");
 

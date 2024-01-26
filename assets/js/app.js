@@ -1,7 +1,24 @@
 let cardContainer = document.querySelector(".card-container");
 let input = document.querySelector(".search-bar  input");
+let body = document.querySelector("body");
+let theme = document.querySelector(".theme");
+let themeImg = document.querySelector(".theme-img > i");
+let themeText = document.querySelector(".theme-text");
 
-console.log(input);
+console.log(themeText);
+
+window.onload = function () {
+  let themeMode = localStorage.getItem("theme");
+  if (themeMode == "dark") {
+    body.classList.add("dark-mode");
+    themeImg.className = "fa-solid fa-sun";
+    themeText.innerHTML = "Light Mode";
+  } else {
+    body.classList.remove("dark-mode");
+    themeImg.className = "fa-solid fa-moon";
+    themeText.innerHTML = "Dark Mode";
+  }
+};
 
 function getData() {
   fetch("https://restcountries.com/v3.1/all")
@@ -33,3 +50,22 @@ getData();
 input.addEventListener("keyup", function (e) {
   console.log(e.target.value);
 });
+
+//! ------------- Theme -----------------
+
+console.log(themeImg);
+theme.addEventListener("click", function (e) {
+  if (!body.classList.contains("dark-mode")) {
+    body.classList.add("dark-mode");
+    themeImg.className = "fa-solid fa-sun";
+    themeText.innerHTML = "Light Mode";
+    localStorage.setItem("theme", "dark");
+  } else {
+    body.classList.remove("dark-mode");
+    themeImg.className = "fa-solid fa-moon";
+    themeText.innerHTML = "Dark Mode";
+    localStorage.setItem("theme", "light");
+  }
+});
+
+

@@ -10,6 +10,10 @@ body {
   background-color: var(--background-color);
 }
 
+body.dark-mode {
+  background-color: var(--background-color-dark, #202c36);
+}
+
 .container {
   padding-left: 5rem;
   padding-right: 5rem;
@@ -38,10 +42,18 @@ body {
   padding-bottom: 23px;
 }
 
+body.dark-mode .top-bar {
+  background-color: var(--header-color-dark, #2b3844);
+}
+
 .top-bar h1 {
   color: var(--text-color);
   font-size: 24px;
   font-weight: 800;
+}
+
+body.dark-mode .top-bar h1 {
+  color: var(--white);
 }
 
 .theme {
@@ -51,6 +63,11 @@ body {
   font-size: 16px;
   font-weight: 600;
   cursor: pointer;
+  user-select: none;
+}
+
+body.dark-mode .theme {
+  color: var(--white);
 }
 
 /*? <------------------ Main ------------------> */
@@ -86,6 +103,11 @@ body {
   line-height: 20px; /* 142.857% */
 }
 
+body.dark-mode .search-filter .search-bar input {
+  background-color: var(--header-color-dark, #2b3844);
+  color: var(--white, #fff);
+}
+
 .filter-select {
   width: 200px;
   display: flex;
@@ -94,6 +116,11 @@ body {
   background: #fff;
   padding: 14px 22px 14px 22px;
   cursor: pointer;
+}
+
+body.dark-mode .filter-select {
+  background-color: var(--header-color-dark, #2b3844);
+  color: var(--white, #fff);
 }
 
 .filter-select > span::selection {
@@ -114,6 +141,11 @@ body {
   display: none;
   position: absolute;
   width: 200px;
+}
+
+body.dark-mode .filter-option {
+  background-color: var(--header-color-dark, #2b3844);
+  color: var(--white, #fff);
 }
 
 .active {
@@ -142,6 +174,11 @@ body {
   &:hover {
     transform: scale(1.03);
   }
+}
+
+body.dark-mode .card {
+  background-color: var(--header-color-dark, #2b3844);
+  color: var(--white);
 }
 
 .card-img {
@@ -193,4 +230,3 @@ body {
     justify-content: center;
   }
 }
-

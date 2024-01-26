@@ -12,6 +12,24 @@ let topLevelDomain = document.querySelector(".top-level-domain");
 let currencies = document.querySelector(".currencies");
 let languages = document.querySelector(".languages");
 
+let body = document.querySelector("body");
+let theme = document.querySelector(".theme");
+let themeImg = document.querySelector(".theme-img > i");
+let themeText = document.querySelector(".theme-text");
+
+window.onload = function () {
+  let themeMode = localStorage.getItem("theme");
+  if (themeMode == "dark") {
+    body.classList.add("dark-mode");
+    themeImg.className = "fa-solid fa-sun";
+    themeText.innerHTML = "Light Mode";
+  } else {
+    body.classList.remove("dark-mode");
+    themeImg.className = "fa-solid fa-moon";
+    themeText.innerHTML = "Dark Mode";
+  }
+};
+
 fetch(`https://restcountries.com/v3.1/name/${urlParams}`)
   .then((res) => res.json())
   .then((data) => {
@@ -21,9 +39,23 @@ fetch(`https://restcountries.com/v3.1/name/${urlParams}`)
       nativeName.innerHTML = item.name.nativeName.fra.official;
       population.innerHTML = item.population.toLocaleString("en-UK");
       region.innerHTML = item.region;
-      subRegion.innerHTML=item.subregion;
+      subRegion.innerHTML = item.subregion;
       capital.innerHTML = item.capital;
       currencies.innerHTML = item.currencies.EUR.name;
       languages.innerHTML = item.languages[0];
     });
   });
+
+theme.addEventListener("click", function (e) {
+  if (!body.classList.contains("dark-mode")) {
+    body.classList.add("dark-mode");
+    themeImg.className = "fa-solid fa-sun";
+    themeText.innerHTML = "Light Mode";
+    localStorage.setItem("theme", "dark");
+  } else {
+    body.classList.remove("dark-mode");
+    themeImg.className = "fa-solid fa-moon";
+    themeText.innerHTML = "Dark Mode";
+    localStorage.setItem("theme", "light");
+  }
+});
