@@ -44,10 +44,10 @@ fetch("https://restcountries.com/v3.1/all")
           </div>
         </a>
   `;
-    });
 
-    data.push(card);
-    localStorage.setItem("data", JSON.stringify(data));
+      data.push(card);
+      localStorage.setItem("data", JSON.stringify(data));
+    });
   });
 
 input.addEventListener("keyup", function (e) {
