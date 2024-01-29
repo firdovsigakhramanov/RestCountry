@@ -6,10 +6,8 @@ let themeImg = document.querySelector(".theme-img > i");
 let themeText = document.querySelector(".theme-text");
 let data = [];
 
-let parseData = JSON.parse(localStorage.getItem("data"));
 console.log(themeText);
 
-console.log(parseData);
 window.onload = function () {
   let themeMode = localStorage.getItem("theme");
   if (themeMode == "dark") {
@@ -46,7 +44,6 @@ fetch("https://restcountries.com/v3.1/all")
   `;
 
       data.push(card);
-      localStorage.setItem("data", JSON.stringify(data));
     });
   });
 
@@ -81,7 +78,7 @@ function search(searchTerm, data) {
 }
 
 input.addEventListener("keyup", function (e) {
-  result = search(e.target.value, parseData);
+  result = search(e.target.value, data);
   cardContainer.innerHTML = "";
   result.forEach((card) => {
     cardContainer.innerHTML += `
