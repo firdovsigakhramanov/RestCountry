@@ -31,6 +31,10 @@ body.dark-mode {
   background-color: var(--background-color);
 }
 
+.hide {
+  display: none;
+}
+
 /*? <----------------- Header --------------------> */
 
 .top-bar {
@@ -210,6 +214,30 @@ body.dark-mode .card {
 .card-body > p > span {
   font-weight: 600;
   line-height: 16px;
+}
+
+.btn__load-more {
+  background-color: var(--white);
+  color: var(--text-color);
+  text-align: center;
+  padding: 15px;
+  width: 150px;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  user-select: none;
+}
+
+body.dark-mode .btn__load-more {
+  color: var(--white);
+  background: var(--header-color-dark, #2b3844);
+  user-select: none;
+}
+
+.btn-container {
+  margin: 30px auto;
+  display: flex;
+  justify-content: center;
 }
 
 /*? ---------------------- Media Screen -------------------- */
