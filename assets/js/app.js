@@ -17,7 +17,7 @@ let filterOption = document.querySelectorAll(".filter-option");
 let filterSelectText = document.querySelector(".filter-select > span");
 // *---------*---------*---------*---------*---------*---------*---------
 
-window.onload = function () {
+window.onload = setTimeout(function () {
   screenData = data.splice(0, 32);
   getData(screenData);
   let themeMode = localStorage.getItem("theme");
@@ -30,7 +30,7 @@ window.onload = function () {
     themeImg.className = "fa-solid fa-moon";
     themeText.innerHTML = "Dark Mode";
   }
-};
+}, 100);
 
 fetch("https://restcountries.com/v3.1/all")
   .then((res) => res.json())
@@ -102,6 +102,7 @@ input.addEventListener("keyup", function (e) {
     loadMore.classList.remove("hide");
     cardContainer.innerHTML = "";
     getData(screenData);
+    console.log(screenData, searchData, data);
   }
 });
 
@@ -125,7 +126,6 @@ filterSelect.addEventListener("click", function (e) {
   filterOptions.classList.toggle("active");
   selectImg.classList.toggle("rotate");
   loadMore.classList.add("hide");
-  console.log(filterSelect);
 });
 
 filterOption.forEach((item) => {
@@ -145,5 +145,3 @@ function selectRegion(item) {
       getData(data);
     });
 }
-
-console.log(filterSelect);
