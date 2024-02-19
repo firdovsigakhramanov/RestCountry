@@ -9,13 +9,12 @@ let data = [];
 let searchData = [];
 let screenData = [];
 
-//* Filter-Select*---------*---------*---------*---------*---------*---
+//* Filter-Select -------------------------------->
 let filterSelect = document.querySelector(".filter-select");
 let filterOptions = document.querySelector(".filter-options");
 let selectImg = document.querySelector(".filter-select__img > i");
 let filterOption = document.querySelectorAll(".filter-option");
 let filterSelectText = document.querySelector(".filter-select > span");
-// *---------*---------*---------*---------*---------*---------*---------
 
 window.onload = setTimeout(function () {
   screenData = data.splice(0, 32);
@@ -102,7 +101,6 @@ input.addEventListener("keyup", function (e) {
     loadMore.classList.remove("hide");
     cardContainer.innerHTML = "";
     getData(screenData);
-    console.log(screenData, searchData, data);
   }
 });
 

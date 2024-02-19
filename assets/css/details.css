@@ -14,6 +14,10 @@ body.dark-mode {
   background-color: var(--background-color-dark, #202c36);
 }
 
+a {
+  text-decoration: none;
+}
+
 .container {
   padding-left: 5rem;
   padding-right: 5rem;
@@ -46,13 +50,13 @@ body.dark-mode .top-bar {
   background-color: var(--header-color-dark, #2b3844);
 }
 
-.top-bar h1 {
+.top-bar h1 a {
   color: var(--text-color);
   font-size: 24px;
   font-weight: 800;
 }
 
-body.dark-mode .top-bar h1 {
+body.dark-mode .top-bar h1 a {
   color: var(--white);
 }
 
@@ -170,7 +174,9 @@ body.dark-mode .country-border > div:first-child {
   flex-wrap: wrap;
 }
 
-.country-border > div:nth-child(2) > div {
+.country-border > div:nth-child(2) > a {
+  color: var(--text-color, #111517);
+  text-decoration: none;
   background-color: var(--white);
   padding: 3px 10px;
   box-shadow: 0px 0px 4px 1px var(--box-shadow-country-border);
@@ -178,7 +184,7 @@ body.dark-mode .country-border > div:first-child {
   cursor: pointer;
 }
 
-body.dark-mode .country-border > div:nth-child(2) > div {
+body.dark-mode .country-border > div:nth-child(2) > a {
   background-color: var(--header-color-dark, #2b3844);
   color: var(--white, #fff);
 }

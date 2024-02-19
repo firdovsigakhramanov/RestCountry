@@ -14,6 +14,10 @@ body.dark-mode {
   background-color: var(--background-color-dark, #202c36);
 }
 
+a {
+  text-decoration: none;
+}
+
 .container {
   padding-left: 5rem;
   padding-right: 5rem;
@@ -50,13 +54,13 @@ body.dark-mode .top-bar {
   background-color: var(--header-color-dark, #2b3844);
 }
 
-.top-bar h1 {
+.top-bar h1 a {
   color: var(--text-color);
   font-size: 24px;
   font-weight: 800;
 }
 
-body.dark-mode .top-bar h1 {
+body.dark-mode .top-bar h1 a {
   color: var(--white);
 }
 
